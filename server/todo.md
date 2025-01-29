@@ -1,0 +1,7 @@
+- create model, config, db
+- create user
+- utilize joi validator
+- Add return to errList to prevent code execution after validation fails
+- bcrypt password
+- mvc
+- utilize passport-jwt
