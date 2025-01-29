@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["https://passport-jwt30.vercel.app", "http://localhost:3000"],
+    origin: "*",
     credentials: true,
   })
 );
