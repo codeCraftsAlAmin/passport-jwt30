@@ -13,7 +13,7 @@ const Profile = () => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://localhost:3000/profile", {
+        .get("https://passport-jwt30.onrender.com/profile", {
           headers: {
             Authorization: token,
           },

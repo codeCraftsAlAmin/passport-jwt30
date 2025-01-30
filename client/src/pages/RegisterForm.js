@@ -25,12 +25,15 @@ const RegisterForm = () => {
   // pass values to backend
   const handleSubmit = async (values) => {
     try {
-      const res = await axios.post("http://localhost:3000/register", {
-        username: values.username,
-        email: values.email,
-        password: values.password,
-        confirm_password: values.confirm_password,
-      });
+      const res = await axios.post(
+        "https://passport-jwt30.onrender.com/register",
+        {
+          username: values.username,
+          email: values.email,
+          password: values.password,
+          confirm_password: values.confirm_password,
+        }
+      );
 
       if (res.data) {
         console.log("successfully registered");

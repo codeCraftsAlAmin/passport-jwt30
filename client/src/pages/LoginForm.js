@@ -21,7 +21,7 @@ const LoginForm = () => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://localhost:3000/profile", {
+        .get("https://passport-jwt30.onrender.com/profile", {
           headers: {
             Authorization: token,
           },
@@ -41,10 +41,13 @@ const LoginForm = () => {
   // set token to localStorage
   const handleSubmit = async (values) => {
     try {
-      const res = await axios.post("http://localhost:3000/login", {
-        email: values.email,
-        password: values.password,
-      });
+      const res = await axios.post(
+        "https://passport-jwt30.onrender.com/login",
+        {
+          email: values.email,
+          password: values.password,
+        }
+      );
       // console.log(res);
 
       if (res.status === 200) {

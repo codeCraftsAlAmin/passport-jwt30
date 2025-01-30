@@ -8,7 +8,12 @@ require("./config/db");
 app.use(passport.initialize());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://passport-jwt30.vercel.app",
+    credentials: true,
+  })
+);
 
 // routes
 app.use(userRouter);
